@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  build:
+    image: gradle:8.5-jdk21
+    volumes:
+      - .:/home/gradle/project
+    working_dir: /home/gradle/project
+    command: ["sh", "-c", "gradle clean build"]
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=default
+      - JVM_OPTS=-Xms512m -Xmx1024m
+    depends_on:
+      build:
+        condition: service_completed_successfully
