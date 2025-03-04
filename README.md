@@ -1,4 +1,5 @@
 # Spring Boot REST API
+[![CI/CD Pipeline](https://github.com/krunalsabnis/demo-mortgage-rest-springboot/actions/workflows/ci.yml/badge.svg)](https://github.com/krunalsabnis/demo-mortgage-rest-springboot/actions)
 
 ## Project Overview
 This is a Spring Boot REST API project using Gradle with Java 21.
