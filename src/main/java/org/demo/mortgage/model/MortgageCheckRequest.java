@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
 
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -28,3 +29,4 @@ public class MortgageCheckRequest {
     @Min(value = 1, message = "Home value must be greater than zero")
     private BigDecimal homeValue;
 }
+

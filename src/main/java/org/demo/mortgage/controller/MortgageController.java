@@ -3,6 +3,7 @@ package org.demo.mortgage.controller;
 
 import jakarta.validation.Valid;
 import org.demo.mortgage.model.InterestRate;
+
 import org.demo.mortgage.model.MortgageCheckRequest;
 import org.demo.mortgage.model.MortgageCheckResponse;
 import org.demo.mortgage.service.InterestRateService;
@@ -41,6 +42,7 @@ public class MortgageController {
     @Operation(summary = "Check mortgage feasibility")
     @PostMapping("/mortgage-check")
     public MortgageCheckResponse checkMortgage(@Valid @RequestBody MortgageCheckRequest request) {
+
         return mortgageService.checkMortgage(request);
     }
 
